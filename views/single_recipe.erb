@@ -1,0 +1,20 @@
+<div style="margin-top: 30px">
+  <ul>
+    <li><h5><strong> Name : <%= @recipe[0]["name"]%></strong></h5></li>
+    <li><strong>Recipes ID:</strong> <%= @recipe[0]["id"]%></li>
+    <li><strong> Description :</strong><br>
+      <span style="padding-left: 30px"><%= @recipe[0]["description"]%></span>
+    </li>
+    <li><strong> Ingredients</strong></li>
+  </ul>
+  <ol>
+    <% @recipe.each do |ingredient|%>
+    <li> <%= ingredient["ingredients"] %></li>
+    <% end %>
+  </ol>
+  <ul>
+    <li><strong> Instructions:</strong></li><br>
+    <%= @recipe[0]["instructions"]%>
+  </ul>
+</div>
+<br>

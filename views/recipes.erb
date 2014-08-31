@@ -1,0 +1,11 @@
+<div style="margin-top: 30px">
+  <ul>
+    <% @recipe_names.each do |recipe| %>
+      <a href="/recipes/<%= recipe["id"] %>">
+        <li>
+          <%= recipe["name"] %>
+        </li>
+      </a>
+    <% end %>
+  </ul>
+</div>
